@@ -68,23 +68,23 @@ export default function Settings({ onChanged }: { onChanged: () => Promise<void>
       <section className="info">
         <h3>Распознавание по фото</h3>
         <div className="field">
-          <label htmlFor="s-key">Ключ Gemini API</label>
+          <label htmlFor="s-key">Ключ OpenRouter API</label>
           <input
             id="s-key"
             value={apiKey}
             onChange={(e) => saveKey(e.target.value)}
-            placeholder="AIza…"
+            placeholder="sk-or-…"
             autoComplete="off"
             spellCheck={false}
           />
         </div>
         <p className="hint">
           Бесплатный ключ:{' '}
-          <a href="https://aistudio.google.com/apikey" target="_blank" rel="noreferrer">
-            aistudio.google.com/apikey
+          <a href="https://openrouter.ai/keys" target="_blank" rel="noreferrer">
+            openrouter.ai/keys
           </a>
-          . Нужен только для распознавания — при нём фото упаковки отправляется в Google. Всё
-          остальное хранится на этом устройстве.
+          . Нужен только для распознавания — при нём фото упаковки отправляется в OpenRouter
+          (используются бесплатные модели). Всё остальное хранится на этом устройстве.
         </p>
       </section>
 

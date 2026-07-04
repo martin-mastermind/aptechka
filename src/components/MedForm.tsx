@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type ChangeEvent, type FormEvent } from 'react';
 import type { Med } from '../types';
 import { saveMed, settings } from '../db';
-import { analyzeMedPhoto } from '../gemini';
+import { analyzeMedPhoto } from '../openrouter';
 import { shrinkImage } from '../image';
 import { go, vibrate } from '../route';
 import Screen from './Screen';
@@ -185,7 +185,7 @@ export default function MedForm({ med, meds, onChanged }: Props) {
       )}
       {photo && !hasKey && (
         <p className="hint block-hint">
-          Для распознавания нужен бесплатный ключ Gemini —{' '}
+          Для распознавания нужен бесплатный ключ OpenRouter —{' '}
           <a href="#/settings">добавить в настройках</a>.
         </p>
       )}
